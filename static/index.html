@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-container">
+            <div class="search-bar-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-bar" id="search-bar" placeholder="Enter city name...">
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            <button class="get-weather-btn" id="get-weather-btn">Get Weather</button>
+        </div>
+
+        <div id="loading-indicator" style="display: none;">Loading weather data...</div>
+        <div id="error-message" style="display: none;"></div>
+
+        <div class="current-info hidden" id="current-info">
+            <div class="date-container">
+                <div class="time" id="time"></div>
+                <div class="date" id="date"></div>
+                <div class="others" id="current-weather-items"></div>
+            </div>
+            <div class="place-container">
+                <div class="time-zone" id="time-zone"></div>
+                <div id="country" class="country"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="future-forecast hidden" id="future-forecast">
+        <div class="today" id="current-temp">
+            <!-- Content will be dynamically populated by JavaScript -->
+        </div>
+        <div class="weather-forecast" id="weather-forecast">
+            <!-- Forecast items will be dynamically populated by JavaScript -->
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
